@@ -47,7 +47,7 @@ public partial class fpassword : System.Web.UI.Page
         }
         if (!string.IsNullOrEmpty(password))
         {
-            MailMessage mm = new MailMessage("kulkarni.ajinkya101@gmail.com", email1.Text.Trim());
+            MailMessage mm = new MailMessage("your email", email1.Text.Trim());
             mm.Subject = "Password Recovery";
             mm.Body = string.Format("Hi {0},<br /><br />Your password is {1}.<br /><br />Thank You.", username, password);
             mm.IsBodyHtml = true;
@@ -55,8 +55,8 @@ public partial class fpassword : System.Web.UI.Page
             smtp.Host = "smtp.gmail.com";
             smtp.EnableSsl = true;
             NetworkCredential NetworkCred = new NetworkCredential();
-            NetworkCred.UserName = "kulkarni.ajinkya101@gmail.com";
-            NetworkCred.Password = "90164ef8@ak555";  
+            NetworkCred.UserName = <email>
+            NetworkCred.Password = <password>  
             smtp.UseDefaultCredentials = true;
             smtp.Credentials = NetworkCred;
             smtp.Port = 587;
